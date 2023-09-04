@@ -6,13 +6,13 @@
 /**
  * struct listint_s - singly linkee list.
  * @n: int param.
- * @next: pointer.
+ * @link: pointer.
  * Description: List
  */
 typedef struct listint_s
 {
     int n;
-    struct listint_s *next;
+    struct listint_s *link;
 } listint_t;
 
 size_t print_listint(const listint_t *h);
