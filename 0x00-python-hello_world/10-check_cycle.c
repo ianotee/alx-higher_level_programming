@@ -10,19 +10,19 @@ int check_cycle(listint_t *list)
 {
 	listint_t *lower, *super;
 
-	if (list == NULL || list->link == NULL)
+	if (list == NULL || list->next == NULL)
 		return (0);
 
-	lower = list->link;
-	super = list->link->link;
+	lower = list->next;
+	super = list->next->next;
 
-	while (lower && super && super->link)
+	while (lower && super && super->next)
 	{
 		if (lower == super)
 			return (1);
 
-		lower =lower->link;
-		super = super->link->link;
+		lower =lower->next;
+		super = super->next->next;
 	}
 
 	return (0);
