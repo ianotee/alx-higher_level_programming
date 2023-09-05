@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-for m in range(ord('z'), ord('a') - 1, -1):
-    if m % 2 == 0:
-        num = 0
+for i in range(ord('z'), ord('a') - 1, -1):
+    if i % 2 == 0:
+        diff = 0
     else:
-        num  = 32
-    print('{}'.format(chr(m - num)), end='')
+        diff = 32
+    print('{}'.format(chr(i - diff)), end='')
 
