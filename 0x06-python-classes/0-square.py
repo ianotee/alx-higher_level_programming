@@ -3,5 +3,5 @@
 
 
 class Square:
-    """Does nothing"""
+    """The block  pass """
     pass

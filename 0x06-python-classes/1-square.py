@@ -8,7 +8,7 @@ class Square:
 
     def __init__(self, size):
         """The initialization of an instance/object variable
-         Args: size - represnets the size of the square being defined
+         size - The size  of the square.
         """
 
 
