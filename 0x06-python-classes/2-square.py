@@ -1,22 +1,14 @@
 #!/usr/bin/python3
-""" a square """
+"""The Square Class"""
 
 
 class Square:
-    """class of square"""
+    """The square"""
 
     def __init__(self, size=0):
-        """ square class
-    
-           size - The size.
-        
-        Error: size is not integer
-          Error:The  size is lower than zero.
-        """
 
         if not isinstance(size, int):
-            raise TypeError('size is an integer')
-        if size < 0:
-            raise ValueError('The size is >= 0')
-
+            raise TypeError("size is integer")
+        elif size < 0:
+            raise ValueError("size >= 0")
         self.__size = size
