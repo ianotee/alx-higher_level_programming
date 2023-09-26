@@ -33,20 +33,20 @@ class Square:
         Args:
             value: size
         Raises:
-                TypeError: if value is not int
-                ValueError: if valie < 0
+                TypeError: not int.
+                ValueError: value is less that zero.
         """
         if not isinstance(value, int):
-            raise TypeError('size must be an integer')
+            raise TypeError('size')
         if value < 0:
-            raise ValueError('size must be >= 0')
+            raise ValueError('size is  >= 0')
         self.__size = value
 
     @property
     def position(self):
         """ position of square
         Raises:
-            TypeError: if value != tuple of 2 ints >= 0.
+            TypeError: value != tuple of 2 ints >= 0.
         Returns:  position
         """
         return self.__position
@@ -55,23 +55,23 @@ class Square:
     def position(self, value):
         """ position
         Args:
-            value: where
+            value: The
         Raises:
-                TypeError: not tuple, ints, positive
+                TypeError: not tuple.
         Returns:  position
         """
         if not isinstance(value, tuple):
-            raise TypeError('position must be a tuple of 2 positive integers')
+            raise TypeError(' A  tuple of two integers')
         if len(value) != 2:
-            raise TypeError('position must be a tuple of 2 positive integers')
+            raise TypeError('A  tuple of two  integers')
         if len([i for i in value if isinstance(i, int) and i >= 0]) != 2:
-            raise TypeError('position must be a tuple of 2 positive integers')
+            raise TypeError(' A  tuple of two integers')
         self.__position = value
 
     def area(self):
         """ area of square
         Returns:
-            size * size
+            size *The  size
         """
         return self.__size * self.__size
 

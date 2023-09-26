@@ -27,7 +27,7 @@ class Node:
 
     @property
     def next_node(self):
-        """get next_node attribute
+        """The  next_node 
         Returns: next node
         """
 
