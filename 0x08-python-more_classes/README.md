@@ -1,1 +1,1 @@
-This is a python Class and Objects project
+This is a Python Class and Object programming language
