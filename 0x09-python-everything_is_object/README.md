@@ -1,1 +1,1 @@
-This is a Python Everything is Object Project
+This is a Python Everything is Objects in Python
