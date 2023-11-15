@@ -1,4 +1,5 @@
---This creates a table with multiple rows.
+-- Creates a second_table in the DB hbtn_0c_0 in MySQL server.
+
 CREATE TABLE IF NOT EXISTS second_table (id INT,
 name VARCHAR(256),
 score INT);

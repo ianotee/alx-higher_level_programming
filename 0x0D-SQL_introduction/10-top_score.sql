@@ -1,2 +1,2 @@
---Lists all the records of the secod table.
+--  Lists all records of second_table of the DB hbtn_0c_0.
 SELECT score, name FROM second_table ORDER BY score DESC;
