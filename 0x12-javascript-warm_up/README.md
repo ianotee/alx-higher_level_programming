@@ -1,1 +1,1 @@
-This is a Javascript Project
+This is a Javascript Warm Up
