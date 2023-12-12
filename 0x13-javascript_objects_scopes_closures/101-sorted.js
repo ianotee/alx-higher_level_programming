@@ -1,9 +1,9 @@
 #!/usr/bin/node
-exports.dict = {
-  89: 1,
-  90: 2,
-  91: 1,
-  92: 3,
-  93: 1,
-  94: 2
-};
+
+const dict = require('./101-data').dict;
+const output = {};
+for (const dat in dict) {
+  if (!output[dict[dat]]) output[dict[dat]] = [];
+  output[dict[dat]].push(dat);
+}
+console.log(output);
