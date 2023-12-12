@@ -1,13 +1,23 @@
 #!/usr/bin/node
-const mzee = require('./5-square');
-class Square extends mzee {
+
+const square = require('./5-square');
+
+class Square extends square {
+  constructor (size) {
+    super(size, size);
+  }
+
   charPrint (c) {
-    if (!c) {
-      c = 'X';
-    }
-    for (let i = 0; i < this.width; i++) {
-      console.log(c.repeat(this.width));
+    if (c === undefined) {
+      this.print();
+    } else {
+      let j = 0;
+      while (j < this.width) {
+        console.log(c.repeat(this.width));
+        j++;
+      }
     }
   }
 }
+
 module.exports = Square;
