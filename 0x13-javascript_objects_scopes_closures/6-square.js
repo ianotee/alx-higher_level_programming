@@ -1,23 +1,13 @@
 #!/usr/bin/node
-/**
- * The Square is good.
- */
-const PrevSquare = require('./5-square');
-
-class Square extends PrevSquare {
+const mzee = require('./5-square');
+class Square extends mzee {
   charPrint (c) {
-    const myChar = c === undefined ? 'X' : c;
-    for (let i = 0; i < this.height; i++) {
-      let myVar = '';
-      let y = 0;
-      while (y < this.width) {
-        myVar += myChar;
-        y++;
-      }
-
-      console.log(myVar);
+    if (!c) {
+      c = 'X';
+    }
+    for (let i = 0; i < this.width; i++) {
+      console.log(c.repeat(this.width));
     }
   }
 }
-
 module.exports = Square;
