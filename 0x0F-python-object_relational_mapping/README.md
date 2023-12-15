@@ -1,1 +1,1 @@
-This is a ORM Object Relational Mapping Project
+This is the Object Relational Mapping project
