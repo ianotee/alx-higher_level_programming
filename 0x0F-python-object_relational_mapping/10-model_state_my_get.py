@@ -1,28 +1,23 @@
 #!/usr/bin/python3
 """
-This is used to print all the states.
+The script lists all state objects.
 """
-
-from sys import argv
-from model_state import State, Base
+import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from sys import argv
+from model_state import Base, State
 
 if __name__ == "__main__":
-    """
-    Is used to get the data.
-    """
-
-    db_url = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
-        argv[1], argv[2], argv[3])
-
-    engine = create_engine(db_url)
-    Session = sessionmaker(bind=engine)
-
+    eng = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(argv[1],
+                                                                    argv[2],
+                                                                    argv[3]))
+    Base.metadata.create_all(eng)
+    Session = sessionmaker(bind=eng)
     session = Session()
-
-    state = session.query(State).filter(State.name == argv[4]).first()
+    state = session.query(State).filter_by(name=argv[4]).first()
     if state is not None:
-        print('{0}'.format(state.id))
+        print(str(state.id))
     else:
         print("Not found")
+    session.close()
